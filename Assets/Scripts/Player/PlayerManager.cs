@@ -82,6 +82,10 @@ public class PlayerManager : MonoBehaviour
             checkpointPosition = other.transform.position;
             other.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            Respawn();
+        }
     }
     
 
