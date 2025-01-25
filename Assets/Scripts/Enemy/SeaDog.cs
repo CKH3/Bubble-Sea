@@ -5,20 +5,32 @@ using UnityEngine;
 // The sound wave is a circle collider
 public class SeaDog : MonoBehaviour
 {
+    private Animator animator;
+
     public GameObject soundWavePrefab;
 
     public float soundWaveLifetime = 2.0f;
     
     private float nextSoundWaveTime;
 
-    // Update is called once per frame
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (Time.time > nextSoundWaveTime)
         {
-            GameObject soundWave = Instantiate(soundWavePrefab, transform.position, Quaternion.identity);
-            Destroy(soundWave, soundWaveLifetime);
+            animator.SetTrigger("Swipe");
             nextSoundWaveTime = Time.time + soundWaveLifetime;
         }
+    }
+
+    // Method to spawn the sound wave
+    public void SpawnSoundWave()
+    {
+        GameObject soundWave = Instantiate(soundWavePrefab, transform.position, Quaternion.identity);
+        Destroy(soundWave, soundWaveLifetime);
     }
 }
