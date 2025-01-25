@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SeaDog_0: -1571416294224545968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

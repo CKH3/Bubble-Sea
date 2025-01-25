@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Oxygen
   - Checkpoint
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -52,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,10 +109,10 @@ TextureImporter:
       name: "\u96FB\u9C3B_0"
       rect:
         serializedVersion: 2
-        x: 8
-        y: 21
-        width: 68
-        height: 24
+        x: 9
+        y: 22
+        width: 66
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: "\u96FB\u9C3B_1"
       rect:
         serializedVersion: 2
-        x: 87
-        y: 26
-        width: 71
-        height: 18
+        x: 88
+        y: 27
+        width: 69
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: "\u96FB\u9C3B_2"
       rect:
         serializedVersion: 2
-        x: 168
-        y: 24
-        width: 69
-        height: 20
+        x: 169
+        y: 25
+        width: 67
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
