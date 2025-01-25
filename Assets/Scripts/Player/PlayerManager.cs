@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    private Oxygen oxygenManager;
+
     public float bubble_radius = 0.5f;
     public Vector3 checkpointPosition = Vector3.zero;
 
@@ -13,6 +15,13 @@ public class PlayerManager : MonoBehaviour
 
     public int score = 0;
     
+    // Start is called before the first frame update
+    void Start()
+    {
+        oxygenManager = GetComponent<Oxygen>();
+        oxygenManager.setMaxOxygen((int)max_oxygen);
+    }
+
     public void LoseOxygen(float amount)
     {
         oxygen -= amount;
@@ -20,6 +29,7 @@ public class PlayerManager : MonoBehaviour
         {
             oxygen = 0;
         }
+        oxygenManager.setOxygen((int)oxygen);
     }
 
 
@@ -30,6 +40,7 @@ public class PlayerManager : MonoBehaviour
         {
             oxygen = max_oxygen;
         }
+        oxygenManager.setOxygen((int)oxygen);
     }
 
     public void AddScore(int amount)
