@@ -8,6 +8,7 @@ TagManager:
   - Oxygen
   - Checkpoint
   - Obstacle
+  - Pearl
   layers:
   - Default
   - TransparentFX
