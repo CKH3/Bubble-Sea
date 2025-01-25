@@ -3,8 +3,7 @@ using UnityEngine;
 // Let player control the bubble movement using arrow keys to move left, right, up, and down
 public class PlayerController : MonoBehaviour
 {
-
-    private const float BUBBLE_RADIUS = 0.5f;
+    private PlayerManager PlayerManager;
 
     private float xRange;
     private float yRange;
@@ -16,15 +15,18 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    // Start is called before the first frame update
     void Start()
     {
-        xRange = Camera.main.aspect * Camera.main.orthographicSize - BUBBLE_RADIUS;
-        yRange = Camera.main.orthographicSize - BUBBLE_RADIUS;
+        PlayerManager = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        xRange = Camera.main.aspect * Camera.main.orthographicSize - PlayerManager.bubble_radius;
+        yRange = Camera.main.orthographicSize - PlayerManager.bubble_radius;
+
         // Get input
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
