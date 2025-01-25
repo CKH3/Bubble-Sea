@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
-public class Dolphin : MonoBehaviour
+public class Fish : MonoBehaviour
 {
     public float Speed = 1f;
     private int direction = 1;
