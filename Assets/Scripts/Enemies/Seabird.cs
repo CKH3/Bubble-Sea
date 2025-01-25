@@ -16,14 +16,17 @@ public float pooTimer = 0f;
 // Update is called once per frame
 void Update()
 {
-    float move = Speed * Time.deltaTime;
-    transform.Translate(Vector2.left * Speed * direction);
-
     pooTimer += Time.deltaTime;
     if (pooTimer >= pooCD)
     {
         poo();
     }
+}
+
+void FixedUpdate()
+{
+    float move = Speed * Time.deltaTime;
+    transform.Translate(Vector2.left * Speed * direction);
 }
 
 void OnCollisionEnter2D(UnityEngine.Collision2D collision)

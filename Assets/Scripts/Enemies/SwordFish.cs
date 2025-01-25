@@ -25,8 +25,7 @@ public class SwordFish : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        float move = Speed * Time.deltaTime;
-        transform.Translate(Vector2.left * currentSpeed * direction);
+        
 
         if (!isDashing)
         {
@@ -48,6 +47,12 @@ public class SwordFish : MonoBehaviour
                 Debug.Log("NotDashing");
             }
         }
+    }
+
+    void FixedUpdate()
+    {
+        float move = currentSpeed * Time.deltaTime;
+        transform.Translate(Vector2.left * currentSpeed * direction);
     }
 
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)

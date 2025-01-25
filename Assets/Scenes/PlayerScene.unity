@@ -890,6 +890,10 @@ PrefabInstance:
       propertyPath: oxygenSlider
       value: 
       objectReference: {fileID: 4645509452639578201}
+    - target: {fileID: 4671875160613980273, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
+      propertyPath: oxygen_loss_rate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7442393267161772310, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
       propertyPath: m_Name
       value: Bubble

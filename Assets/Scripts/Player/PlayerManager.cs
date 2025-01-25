@@ -10,8 +10,8 @@ public class PlayerManager : MonoBehaviour
 
     public float oxygen = 100.0f;
     public float max_oxygen = 100.0f;
-    public float oxygen_loss_rate = 1.0f;
-    public float oxygen_gain_amount = 20.0f;
+    public float oxygen_loss_rate = 5.0f;
+    public float oxygen_gain_amount = 100.0f;
     
 
     public int score = 0;
@@ -59,7 +59,6 @@ public class PlayerManager : MonoBehaviour
     public void Respawn()
     {
         transform.position = checkpointPosition;
-        oxygen = max_oxygen;
     }
 
     public void GameOver()
@@ -76,6 +75,11 @@ public class PlayerManager : MonoBehaviour
     public void Update()
     {
         LoseOxygen(oxygen_loss_rate * Time.deltaTime);
+
+        if (oxygen <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)

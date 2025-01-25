@@ -7,7 +7,7 @@ public class Fish : MonoBehaviour
     private int direction = 1;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float move = Speed * Time.deltaTime;
         transform.Translate(Vector2.left * Speed * direction);
