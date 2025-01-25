@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    private ScoreUI scoreManager;
     private OxygenUI oxygenManager;
 
     public float bubble_radius = 0.5f;
@@ -14,11 +15,14 @@ public class PlayerManager : MonoBehaviour
     
 
     public int score = 0;
+
     
     // Start is called before the first frame update
     void Start()
     {
         oxygenManager = GetComponent<OxygenUI>();
+        scoreManager = GetComponent<ScoreUI>();
+
         oxygenManager.setMaxOxygen((int)max_oxygen);
     }
 
@@ -46,6 +50,7 @@ public class PlayerManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        scoreManager.SetScore(score);
     }
 
     public void Reset()
@@ -81,6 +86,11 @@ public class PlayerManager : MonoBehaviour
         {
             checkpointPosition = other.transform.position;
             other.gameObject.GetComponent<Checkpoint>().SetFlagOpen();
+        }
+        else if (other.gameObject.CompareTag("Pearl"))
+        {
+            AddScore(1);
+            Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
