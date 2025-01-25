@@ -63,9 +63,9 @@ public class PlayerController : MonoBehaviour
             // keep y velocity and set x velocity to 0  
             velocity = new Vector3(0, velocity.y, 0);
         }
-        if (transform.position.y < -yRange * 14)
+        if (transform.position.y < -yRange * 28)
         {
-            transform.position = new Vector3(transform.position.x, -yRange * 14, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -yRange * 28, transform.position.z);
             // keep x velocity and set y velocity to 0
             velocity = new Vector3(velocity.x, 0, 0);
         }

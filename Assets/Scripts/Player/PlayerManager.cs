@@ -16,12 +16,15 @@ public class PlayerManager : MonoBehaviour
 
     public int score = 0;
 
+    private Animator animator;
+
     
     // Start is called before the first frame update
     void Start()
     {
         oxygenManager = GetComponent<OxygenUI>();
         scoreManager = GetComponent<ScoreUI>();
+        animator = GetComponent<Animator>();
 
         oxygenManager.setMaxOxygen((int)max_oxygen);
     }
@@ -53,12 +56,6 @@ public class PlayerManager : MonoBehaviour
         scoreManager.SetScore(score);
     }
 
-    public void Reset()
-    {
-        oxygen = max_oxygen;
-        score = 0;
-    }
-
     public void Respawn()
     {
         transform.position = checkpointPosition;
@@ -68,6 +65,7 @@ public class PlayerManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over!");
+        animator.SetTrigger("Gameover");
     }
 
     public void Win()
