@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public float bubble_radius = 0.5f;
+    public Vector3 checkpointPosition = Vector3.zero;
 
     public float oxygen = 100.0f;
     public float max_oxygen = 100.0f;
@@ -42,6 +43,12 @@ public class PlayerManager : MonoBehaviour
         score = 0;
     }
 
+    public void Respawn()
+    {
+        transform.position = checkpointPosition;
+        oxygen = max_oxygen;
+    }
+
     public void GameOver()
     {
         Debug.Log("Game Over!");
@@ -57,20 +64,15 @@ public class PlayerManager : MonoBehaviour
         LoseOxygen(oxygen_loss_rate * Time.deltaTime);
     }
 
-    // public void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.CompareTag("Oxygen"))
-    //     {
-    //         GainOxygen(oxygen_gain_amount);
-    //         Destroy(other.gameObject);
-    //     }
-    //     else if (other.CompareTag("Enemy"))
-    //     {
-    //         GameOver();
-    //         Destroy(gameObject);
-    //         Time.timeScale = 0;
-    //     }
-    // }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Checkpoint"))
+        {
+            checkpointPosition = other.transform.position;
+            other.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+    }
+    
 
     public void OnCollisionEnter2D(Collision2D other)
     {
@@ -81,9 +83,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
-            GameOver();
-            Destroy(gameObject);
-            Time.timeScale = 0;
+            Respawn();
         }
     }
     
