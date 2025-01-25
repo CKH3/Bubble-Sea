@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Oxygen : MonoBehaviour
+public class OxygenUI : MonoBehaviour
 {
     [SerializeField]
     private Slider oxygenSlider;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private Oxygen oxygenManager;
+    private OxygenUI oxygenManager;
 
     public float bubble_radius = 0.5f;
     public Vector3 checkpointPosition = Vector3.zero;
@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        oxygenManager = GetComponent<Oxygen>();
+        oxygenManager = GetComponent<OxygenUI>();
         oxygenManager.setMaxOxygen((int)max_oxygen);
     }
 
@@ -80,7 +80,7 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.CompareTag("Checkpoint"))
         {
             checkpointPosition = other.transform.position;
-            other.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+            other.gameObject.GetComponent<Checkpoint>().SetFlagOpen();
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
