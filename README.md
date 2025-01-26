@@ -1,3 +1,6 @@
+Trailer & Game Play Demo, Let's Bubble Sea~  https://youtu.be/iSKT7pgpWFo
+
+
 # BubbleGame
  
 Is my life as a mermaid destined to be as fleeting as a bubble, disappearing instantly? I refuse to accept that! 
