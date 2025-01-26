@@ -64,7 +64,8 @@ public class PlayerManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over!");
-        animator.SetTrigger("Gameover");
+        // animator.SetTrigger("Gameover");
+        SceneController.instance.LoadScene("GameoverScene");
     }
 
     public void Win()
