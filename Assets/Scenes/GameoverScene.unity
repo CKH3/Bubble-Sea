@@ -543,17 +543,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e79134c3237f24289a840484254f12, type: 3}
---- !u!114 &1122254275 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5683583416333904580, guid: c3e79134c3237f24289a840484254f12, type: 3}
-  m_PrefabInstance: {fileID: 1122254274}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd9e1a3df3d0d9944904b2be56ccb22f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1194539080
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194539081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -644,6 +633,7 @@ GameObject:
   - component: {fileID: 1298699434}
   - component: {fileID: 1298699433}
   - component: {fileID: 1298699432}
+  - component: {fileID: 1298699435}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -715,10 +705,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1122254275}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1298699435}
+        m_TargetAssemblyTypeName: RestartGame, Assembly-CSharp
+        m_MethodName: LoadMainScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -765,6 +755,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298699430}
   m_CullTransparentMesh: 1
+--- !u!114 &1298699435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298699430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f41e06b1c4728499d0da254b75c4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438305217
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +915,7 @@ GameObject:
   - component: {fileID: 1452029844}
   - component: {fileID: 1452029843}
   - component: {fileID: 1452029842}
+  - component: {fileID: 1452029845}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -984,8 +987,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1122254275}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 1452029845}
+        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1034,6 +1037,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452029840}
   m_CullTransparentMesh: 1
+--- !u!114 &1452029845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452029840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205bba34556be924193f832a888a8540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1519224631
 GameObject:
   m_ObjectHideFlags: 0
