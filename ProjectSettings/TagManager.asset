@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - Obstacle
   - Pearl
+  - FinishLine
   layers:
   - Default
   - TransparentFX

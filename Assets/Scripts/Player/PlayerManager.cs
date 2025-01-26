@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     private ScoreUI scoreManager;
@@ -96,6 +99,12 @@ public class PlayerManager : MonoBehaviour
             playerAnimator.SetBool("isLowOxygen", false);
             playerIconAnimator.SetBool("isLowOxygen", false);
         }
+
+        // if (transform.position.y < -121)
+        // {
+        //     Debug.Log("WinWinWIn");
+        //     SceneManager.LoadSceneAsync("WinScene");
+        // }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -113,6 +122,10 @@ public class PlayerManager : MonoBehaviour
         else if (other.gameObject.CompareTag("Enemy"))
         {
             Respawn();
+        }
+        else if (other.gameObject.CompareTag("FinishLine"))
+        {
+            SceneManager.LoadSceneAsync("WinScene");
         }
     }
     
