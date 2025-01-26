@@ -1,4 +1,6 @@
-Trailer & Game Play Demo, Let's Bubble Sea~  https://youtu.be/iSKT7pgpWFo
+GGJ project: globalgamejam.org/games/2025/project-bubble-4
+
+Trailer & Game Play Demo, Let's Bubble Sea~: https://youtu.be/iSKT7pgpWFo
 
 
 # BubbleGame
