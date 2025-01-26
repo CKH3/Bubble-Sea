@@ -258,6 +258,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3341997611688315221, guid: 3e1f607760dfe1740975bae22221642e, type: 3}
   m_PrefabInstance: {fileID: 1456225103}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &112856746 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4345273243233347502, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
+  m_PrefabInstance: {fileID: 556018890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &165179885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7515619592564766536, guid: 70f1e5b2f91afe4429a449ba6f27914e, type: 3}
@@ -1156,6 +1161,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 368179704}
     - target: {fileID: 4671875160613980273, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 112856746}
+    - target: {fileID: 4671875160613980273, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
       propertyPath: oxygen_loss_rate
       value: 2.5
       objectReference: {fileID: 0}
@@ -1163,6 +1172,10 @@ PrefabInstance:
       propertyPath: oxygen_gain_amount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4671875160613980273, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
+      propertyPath: playerIconAnimator
+      value: 
+      objectReference: {fileID: 777226346}
     - target: {fileID: 4671875160613980273, guid: b5a2bda14d6cb094cb6cbdeb776f3e23, type: 3}
       propertyPath: checkpointPosition.y
       value: 2.5
@@ -1327,6 +1340,33 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1278398783}
   m_SourcePrefab: {fileID: 100100000, guid: adf9768181a8de64480a971b64cdc219, type: 3}
+--- !u!1 &777226342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1369992451483916237, guid: 20fbacc6894244c4bb8af1109f07c967, type: 3}
+  m_PrefabInstance: {fileID: 1596003576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &777226346
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777226342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f0e64dc2bc8e4144974305d54383824, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &805469021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3302,6 +3342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3822238527861209506, guid: 20fbacc6894244c4bb8af1109f07c967, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5562934529859019752, guid: 8b1f2e6d215c57f419bb9ce11774169b, type: 3}
     - target: {fileID: 6041666698349338545, guid: 20fbacc6894244c4bb8af1109f07c967, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3313,7 +3357,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1369992451483916237, guid: 20fbacc6894244c4bb8af1109f07c967, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777226346}
   m_SourcePrefab: {fileID: 100100000, guid: 20fbacc6894244c4bb8af1109f07c967, type: 3}
 --- !u!114 &1596003577 stripped
 MonoBehaviour:

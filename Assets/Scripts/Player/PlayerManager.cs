@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     public int score = 0;
 
     private Animator animator;
+    [SerializeField]
+    private Animator playerAnimator;
+    [SerializeField]
+    private Animator playerIconAnimator;
 
     
     // Start is called before the first frame update
@@ -80,6 +84,17 @@ public class PlayerManager : MonoBehaviour
         if (oxygen <= 0)
         {
             GameOver();
+        }
+
+        if (oxygen <= 40)
+        {
+            playerAnimator.SetBool("isLowOxygen", true);
+            playerIconAnimator.SetBool("isLowOxygen", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isLowOxygen", false);
+            playerIconAnimator.SetBool("isLowOxygen", false);
         }
     }
 
